@@ -21,6 +21,9 @@ Public Class Form10
     Private Sub Form10_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Call loadTable()
         DataGridView1.ReadOnly = True
+
+        ticketVerifier.Text = ""
+        errorNotice.Text = ""
     End Sub
 
     Public Sub loadTable()
@@ -99,6 +102,8 @@ GROUP BY t.orderID
         customercontactnumber.Clear()
         customeremail.Clear()
 
+        ticketVerifier.Text = ""
+        errorNotice.Text = ""
 
         Form9.Show()
         Me.Hide()
@@ -137,6 +142,9 @@ GROUP BY t.orderID
             customername.Clear()
             customercontactnumber.Clear()
             customeremail.Clear()
+
+            ticketVerifier.Text = ""
+            errorNotice.Text = ""
 
         Catch ex As Exception
             MessageBox.Show(ex.ToString)
@@ -239,21 +247,20 @@ WHERE orderID = '" & orderID.Text & "' "
 
                     cmd.ExecuteNonQuery()
 
+                    con.Close()
 
-
-                    Dim printReceipt As New Form8()
+                    Dim printReceipt As New Form11()
 
                     'prop short for property
                     printReceipt.propNameEvent = eventName.Text
-                    printReceipt.propOrderID = orderID.Text
+                    printReceipt.propOrderID = CInt(orderID.Text)
                     printReceipt.propCustomerName = customername.Text
-                    printReceipt.propQty = newQuantity.ToString()
-                    printReceipt.propTicketCodes = ticketHolder
-                    printReceipt.propTotalAmount = (newTotal).ToString()
+                    printReceipt.propQty = newQuantity
+                    printReceipt.propTotalAmount = newTotal
                     printReceipt.Show()
 
                     MessageBox.Show("Order successfully updated!")
-                    con.Close()
+
 
                     eventID.Clear()
                     eventName.Clear()
@@ -263,9 +270,9 @@ WHERE orderID = '" & orderID.Text & "' "
                     customername.Clear()
                     customercontactnumber.Clear()
                     customeremail.Clear()
+                    ticketVerifier.Text = ""
+                    errorNotice.Text = ""
 
-
-                    Form9.Show()
                     Me.Hide()
 
 
@@ -326,7 +333,8 @@ WHERE orderID = '" & orderID.Text & "' "
                     customercontactnumber.Clear()
                     customeremail.Clear()
                     con.Close()
-
+                    ticketVerifier.Text = ""
+                    errorNotice.Text = ""
                     Form9.Show()
                     Me.Hide()
                 End If
@@ -334,15 +342,46 @@ WHERE orderID = '" & orderID.Text & "' "
 
 
             Else
-                ticketVerifier.Text = "Only " & oldCapacity & " tickets are available!"
-                ticketVerifier.Refresh()
+                If String.IsNullOrWhiteSpace(customername.Text) OrElse 'form validation
+                        Not customercontactnumber.MaskCompleted OrElse
+                        String.IsNullOrWhiteSpace(customeremail.Text) Then
 
-                orderQuantity.Value = oldQuantity
-            con.Close()
+                    errorNotice.Text = "Please complete form."
+
+
+
+                    Exit Sub
+
+
+                    'no changes in qty just update customer details
+
+                Else
+                    cmd.CommandText = "UPDATE ticketorder SET quantity = " & newQuantity & ", 
+customername = '" & customername.Text & "', customercontactnumber = '" & customercontactnumber.Text & "',  customeremail = '" & customeremail.Text & "'
+WHERE orderID = '" & orderID.Text & "' "
+                    cmd.ExecuteNonQuery()
+
+                    cmd.CommandText = "UPDATE ticketcode SET  customername = '" & customername.Text & "'
+WHERE orderID = '" & orderID.Text & "' "
+
+                    cmd.ExecuteNonQuery()
+
+                    ticketVerifier.Text = ""
+                    errorNotice.Text = ""
+
+                End If
+
 
 
             End If
+
+
+
+
+
+
             con.Close()
+
 
 
         Catch ex As Exception

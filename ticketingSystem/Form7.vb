@@ -36,6 +36,9 @@ Public Class Form7
         customercontactnumber.Clear()
         customeremail.Clear()
 
+        errorNotice.Text = ""
+        ticketVerifier.Text = ""
+
 
         loadTable()
 
@@ -51,6 +54,9 @@ Public Class Form7
 
         loadTable()
         DataGridView1.ReadOnly = True
+
+        errorNotice.Text = ""
+        ticketVerifier.Text = ""
     End Sub
 
 
@@ -198,6 +204,7 @@ VALUES (
                     printReceipt.propQty = qty.ToString()
                     printReceipt.propTicketCodes = ticketHolder
                     printReceipt.propTotalAmount = total.ToString()
+
                     printReceipt.Show()
 
 
@@ -216,6 +223,9 @@ VALUES (
                     quantity.Value = 1
 
 
+                    ticketVerifier.Text = ""
+                    errorNotice.Text = ""
+
 
                 End If
             End If
@@ -225,9 +235,7 @@ VALUES (
 
     End Sub
 
-    Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
 
-    End Sub
 
 
 End Class

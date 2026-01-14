@@ -37,6 +37,7 @@
         eventActive.Checked = False
         eventInactive.Checked = False
 
+        errorNotice.Refresh()
 
 
     End Sub
@@ -46,8 +47,6 @@
 
 
             'Status
-
-
             If eventActive.Checked Then
                 status = "Active"
 
@@ -89,6 +88,7 @@ VALUES (
                 cmd.ExecuteNonQuery()
                 errorNotice.Text = " "
                 MessageBox.Show("Event succesfully added!")
+
                 con.Close()
 
 
@@ -104,6 +104,7 @@ VALUES (
                 eventActive.Checked = False
                 eventInactive.Checked = False
 
+                errorNotice.Refresh()
 
             End If
 
@@ -113,6 +114,7 @@ VALUES (
 
         End Try
 
+        Form5.loadTable()
         Form5.Show()
         Me.Hide()
     End Sub
@@ -129,6 +131,8 @@ VALUES (
         eventDetails.Clear()
         eventActive.Checked = False
         eventInactive.Checked = False
+
+        errorNotice.Refresh()
     End Sub
 
 

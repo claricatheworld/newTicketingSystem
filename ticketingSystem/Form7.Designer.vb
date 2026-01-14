@@ -24,11 +24,9 @@ Partial Class Form7
     Private Sub InitializeComponent()
         Dim DataGridViewCellStyle1 As DataGridViewCellStyle = New DataGridViewCellStyle()
         logOut = New LinkLabel()
-        Label1 = New Label()
         viewOrders = New LinkLabel()
         viewUser = New LinkLabel()
         viewEvents = New LinkLabel()
-        homepage = New LinkLabel()
         Label2 = New Label()
         DataGridView1 = New DataGridView()
         refreshSelect = New LinkLabel()
@@ -65,7 +63,8 @@ Partial Class Form7
         logOut.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         logOut.AutoSize = True
         logOut.BackColor = Color.Transparent
-        logOut.Font = New Font("Helvetica", 10F)
+        logOut.Font = New Font("Arial", 10F)
+        logOut.LinkColor = Color.White
         logOut.Location = New Point(791, 8)
         logOut.Name = "logOut"
         logOut.Size = New Size(58, 16)
@@ -73,26 +72,16 @@ Partial Class Form7
         logOut.TabStop = True
         logOut.Text = "Log Out"
         ' 
-        ' Label1
-        ' 
-        Label1.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
-        Label1.AutoSize = True
-        Label1.Font = New Font("Helvetica", 15F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label1.Location = New Point(777, 24)
-        Label1.Name = "Label1"
-        Label1.Size = New Size(72, 24)
-        Label1.TabIndex = 11
-        Label1.Text = "Hello! "
-        ' 
         ' viewOrders
         ' 
         viewOrders.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         viewOrders.AutoSize = True
         viewOrders.BackColor = Color.Transparent
-        viewOrders.Font = New Font("Helvetica", 9.75F)
-        viewOrders.Location = New Point(113, 9)
+        viewOrders.Font = New Font("Arial", 9.75F)
+        viewOrders.LinkColor = Color.White
+        viewOrders.Location = New Point(66, 8)
         viewOrders.Name = "viewOrders"
-        viewOrders.Size = New Size(46, 15)
+        viewOrders.Size = New Size(46, 16)
         viewOrders.TabIndex = 10
         viewOrders.TabStop = True
         viewOrders.Text = "Orders"
@@ -102,10 +91,11 @@ Partial Class Form7
         viewUser.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         viewUser.AutoSize = True
         viewUser.BackColor = Color.Transparent
-        viewUser.Font = New Font("Helvetica", 9.75F)
-        viewUser.Location = New Point(165, 9)
+        viewUser.Font = New Font("Arial", 9.75F)
+        viewUser.LinkColor = Color.White
+        viewUser.Location = New Point(118, 8)
         viewUser.Name = "viewUser"
-        viewUser.Size = New Size(41, 15)
+        viewUser.Size = New Size(41, 16)
         viewUser.TabIndex = 9
         viewUser.TabStop = True
         viewUser.Text = "Users"
@@ -115,35 +105,25 @@ Partial Class Form7
         viewEvents.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         viewEvents.AutoSize = True
         viewEvents.BackColor = Color.Transparent
-        viewEvents.Font = New Font("Helvetica", 9.75F)
-        viewEvents.Location = New Point(59, 9)
+        viewEvents.Font = New Font("Arial", 9.75F)
+        viewEvents.LinkColor = Color.White
+        viewEvents.Location = New Point(12, 8)
         viewEvents.Name = "viewEvents"
-        viewEvents.Size = New Size(48, 15)
+        viewEvents.Size = New Size(46, 16)
         viewEvents.TabIndex = 8
         viewEvents.TabStop = True
         viewEvents.Text = "Events"
-        ' 
-        ' homepage
-        ' 
-        homepage.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
-        homepage.AutoSize = True
-        homepage.BackColor = Color.Transparent
-        homepage.Font = New Font("Helvetica", 9.75F)
-        homepage.Location = New Point(12, 9)
-        homepage.Name = "homepage"
-        homepage.Size = New Size(41, 15)
-        homepage.TabIndex = 7
-        homepage.TabStop = True
-        homepage.Text = "Home"
         ' 
         ' Label2
         ' 
         Label2.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         Label2.AutoSize = True
-        Label2.Font = New Font("Helvetica", 15F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label2.BackColor = Color.Transparent
+        Label2.Font = New Font("Arial", 15F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label2.ForeColor = Color.White
         Label2.Location = New Point(12, 48)
         Label2.Name = "Label2"
-        Label2.Size = New Size(208, 24)
+        Label2.Size = New Size(204, 24)
         Label2.TabIndex = 27
         Label2.Text = "UPCOMING EVENTS"
         ' 
@@ -167,6 +147,9 @@ Partial Class Form7
         ' refreshSelect
         ' 
         refreshSelect.AutoSize = True
+        refreshSelect.BackColor = Color.Transparent
+        refreshSelect.ForeColor = Color.White
+        refreshSelect.LinkColor = Color.White
         refreshSelect.Location = New Point(400, 57)
         refreshSelect.Name = "refreshSelect"
         refreshSelect.Size = New Size(46, 15)
@@ -209,7 +192,7 @@ Partial Class Form7
         ' orderTicket
         ' 
         orderTicket.Anchor = AnchorStyles.None
-        orderTicket.Font = New Font("Helvetica", 9.75F, FontStyle.Bold)
+        orderTicket.Font = New Font("Arial", 9.75F, FontStyle.Bold)
         orderTicket.Location = New Point(273, 484)
         orderTicket.Name = "orderTicket"
         orderTicket.Size = New Size(118, 32)
@@ -221,10 +204,11 @@ Partial Class Form7
         ' 
         statusLabel.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         statusLabel.AutoSize = True
-        statusLabel.Font = New Font("Helvetica", 9.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        statusLabel.Font = New Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        statusLabel.ForeColor = Color.White
         statusLabel.Location = New Point(273, 165)
         statusLabel.Name = "statusLabel"
-        statusLabel.Size = New Size(61, 15)
+        statusLabel.Size = New Size(59, 16)
         statusLabel.TabIndex = 114
         statusLabel.Text = "STATUS:"
         ' 
@@ -232,22 +216,23 @@ Partial Class Form7
         ' 
         statusEvent.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         statusEvent.AutoSize = True
-        statusEvent.Font = New Font("Helvetica", 9.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        statusEvent.ForeColor = Color.Green
+        statusEvent.Font = New Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        statusEvent.ForeColor = Color.Chartreuse
         statusEvent.Location = New Point(346, 165)
         statusEvent.Name = "statusEvent"
-        statusEvent.Size = New Size(43, 15)
+        statusEvent.Size = New Size(15, 16)
         statusEvent.TabIndex = 113
-        statusEvent.Text = "status"
+        statusEvent.Text = "[]"
         statusEvent.TextAlign = ContentAlignment.MiddleRight
         ' 
         ' ticketPrice
         ' 
         ticketPrice.AutoSize = True
-        ticketPrice.Font = New Font("Helvetica", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        ticketPrice.Font = New Font("Arial", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        ticketPrice.ForeColor = Color.White
         ticketPrice.Location = New Point(3, 250)
         ticketPrice.Name = "ticketPrice"
-        ticketPrice.Size = New Size(38, 15)
+        ticketPrice.Size = New Size(40, 16)
         ticketPrice.TabIndex = 112
         ticketPrice.Text = "Price"
         ' 
@@ -255,32 +240,33 @@ Partial Class Form7
         ' 
         errorNotice.AutoSize = True
         errorNotice.BackColor = Color.Transparent
-        errorNotice.Font = New Font("Helvetica", 9.75F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
+        errorNotice.Font = New Font("Arial Narrow", 9.75F, FontStyle.Bold Or FontStyle.Italic)
         errorNotice.ForeColor = Color.Red
         errorNotice.Location = New Point(5, 456)
         errorNotice.Name = "errorNotice"
-        errorNotice.Size = New Size(70, 15)
+        errorNotice.Size = New Size(15, 16)
         errorNotice.TabIndex = 111
-        errorNotice.Text = "errorNotice"
+        errorNotice.Text = "[]"
         ' 
         ' customeremail
         ' 
         customeremail.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
-        customeremail.Font = New Font("Helvetica", 9F)
+        customeremail.Font = New Font("Arial", 9F)
         customeremail.Location = New Point(5, 431)
         customeremail.Name = "customeremail"
         customeremail.PlaceholderText = "Enter email"
-        customeremail.Size = New Size(386, 22)
+        customeremail.Size = New Size(386, 21)
         customeremail.TabIndex = 110
         ' 
         ' labelemail
         ' 
         labelemail.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         labelemail.AutoSize = True
-        labelemail.Font = New Font("Helvetica", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        labelemail.Font = New Font("Arial", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        labelemail.ForeColor = Color.White
         labelemail.Location = New Point(5, 413)
         labelemail.Name = "labelemail"
-        labelemail.Size = New Size(44, 15)
+        labelemail.Size = New Size(47, 16)
         labelemail.TabIndex = 109
         labelemail.Text = "Email:"
         ' 
@@ -288,10 +274,11 @@ Partial Class Form7
         ' 
         labelcustomernumber.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         labelcustomernumber.AutoSize = True
-        labelcustomernumber.Font = New Font("Helvetica", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        labelcustomernumber.Font = New Font("Arial", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        labelcustomernumber.ForeColor = Color.White
         labelcustomernumber.Location = New Point(5, 369)
         labelcustomernumber.Name = "labelcustomernumber"
-        labelcustomernumber.Size = New Size(112, 15)
+        labelcustomernumber.Size = New Size(113, 16)
         labelcustomernumber.TabIndex = 108
         labelcustomernumber.Text = "Contact Number:"
         ' 
@@ -307,21 +294,22 @@ Partial Class Form7
         ' customername
         ' 
         customername.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
-        customername.Font = New Font("Helvetica", 9F)
+        customername.Font = New Font("Arial", 9F)
         customername.Location = New Point(5, 344)
         customername.Name = "customername"
         customername.PlaceholderText = "Enter name"
-        customername.Size = New Size(386, 22)
+        customername.Size = New Size(386, 21)
         customername.TabIndex = 106
         ' 
         ' labelcustomername
         ' 
         labelcustomername.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         labelcustomername.AutoSize = True
-        labelcustomername.Font = New Font("Helvetica", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        labelcustomername.Font = New Font("Arial", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        labelcustomername.ForeColor = Color.White
         labelcustomername.Location = New Point(5, 326)
         labelcustomername.Name = "labelcustomername"
-        labelcustomername.Size = New Size(111, 15)
+        labelcustomername.Size = New Size(112, 16)
         labelcustomername.TabIndex = 105
         labelcustomername.Text = "Customer Name:"
         ' 
@@ -329,22 +317,23 @@ Partial Class Form7
         ' 
         ticketVerifier.AutoSize = True
         ticketVerifier.BackColor = Color.Transparent
-        ticketVerifier.Font = New Font("Helvetica", 9.75F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
+        ticketVerifier.Font = New Font("Arial Narrow", 9.75F, FontStyle.Bold Or FontStyle.Italic)
         ticketVerifier.ForeColor = Color.Red
         ticketVerifier.Location = New Point(3, 304)
         ticketVerifier.Name = "ticketVerifier"
-        ticketVerifier.Size = New Size(71, 15)
+        ticketVerifier.Size = New Size(15, 16)
         ticketVerifier.TabIndex = 104
-        ticketVerifier.Text = "qtychecker"
+        ticketVerifier.Text = "[]"
         ' 
         ' eventID
         ' 
         eventID.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         eventID.AutoSize = True
-        eventID.Font = New Font("Helvetica", 9.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        eventID.Font = New Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        eventID.ForeColor = Color.White
         eventID.Location = New Point(339, 37)
         eventID.Name = "eventID"
-        eventID.Size = New Size(52, 15)
+        eventID.Size = New Size(49, 16)
         eventID.TabIndex = 103
         eventID.Text = "eventID"
         ' 
@@ -361,10 +350,11 @@ Partial Class Form7
         ' 
         detailsText.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         detailsText.AutoSize = True
-        detailsText.Font = New Font("Helvetica", 9.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        detailsText.Font = New Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        detailsText.ForeColor = Color.White
         detailsText.Location = New Point(5, 165)
         detailsText.Name = "detailsText"
-        detailsText.Size = New Size(45, 15)
+        detailsText.Size = New Size(45, 16)
         detailsText.TabIndex = 101
         detailsText.Text = "details"
         ' 
@@ -372,10 +362,11 @@ Partial Class Form7
         ' 
         dateEvent.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         dateEvent.AutoSize = True
-        dateEvent.Font = New Font("Helvetica", 9.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        dateEvent.Font = New Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        dateEvent.ForeColor = Color.White
         dateEvent.Location = New Point(5, 99)
         dateEvent.Name = "dateEvent"
-        dateEvent.Size = New Size(32, 15)
+        dateEvent.Size = New Size(32, 16)
         dateEvent.TabIndex = 100
         dateEvent.Text = "date"
         ' 
@@ -383,10 +374,11 @@ Partial Class Form7
         ' 
         showDetails.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         showDetails.AutoSize = True
-        showDetails.Font = New Font("Helvetica", 9.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        showDetails.Font = New Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        showDetails.ForeColor = Color.White
         showDetails.Location = New Point(5, 191)
         showDetails.Name = "showDetails"
-        showDetails.Size = New Size(70, 15)
+        showDetails.Size = New Size(70, 16)
         showDetails.TabIndex = 99
         showDetails.Text = "description"
         ' 
@@ -394,10 +386,11 @@ Partial Class Form7
         ' 
         capacityDisplay.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         capacityDisplay.AutoSize = True
-        capacityDisplay.Font = New Font("Helvetica", 9.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        capacityDisplay.Font = New Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        capacityDisplay.ForeColor = Color.White
         capacityDisplay.Location = New Point(5, 129)
         capacityDisplay.Name = "capacityDisplay"
-        capacityDisplay.Size = New Size(94, 15)
+        capacityDisplay.Size = New Size(92, 16)
         capacityDisplay.TabIndex = 98
         capacityDisplay.Text = "available seats"
         ' 
@@ -405,10 +398,11 @@ Partial Class Form7
         ' 
         endtime.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         endtime.AutoSize = True
-        endtime.Font = New Font("Helvetica", 9.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        endtime.Font = New Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        endtime.ForeColor = Color.White
         endtime.Location = New Point(238, 99)
         endtime.Name = "endtime"
-        endtime.Size = New Size(28, 15)
+        endtime.Size = New Size(28, 16)
         endtime.TabIndex = 97
         endtime.Text = "end"
         ' 
@@ -416,10 +410,11 @@ Partial Class Form7
         ' 
         starttime.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         starttime.AutoSize = True
-        starttime.Font = New Font("Helvetica", 9.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        starttime.Font = New Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        starttime.ForeColor = Color.White
         starttime.Location = New Point(160, 99)
         starttime.Name = "starttime"
-        starttime.Size = New Size(33, 15)
+        starttime.Size = New Size(33, 16)
         starttime.TabIndex = 96
         starttime.Text = "start"
         ' 
@@ -427,10 +422,11 @@ Partial Class Form7
         ' 
         venueEvent.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         venueEvent.AutoSize = True
-        venueEvent.Font = New Font("Helvetica", 9.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        venueEvent.Font = New Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        venueEvent.ForeColor = Color.White
         venueEvent.Location = New Point(5, 69)
         venueEvent.Name = "venueEvent"
-        venueEvent.Size = New Size(42, 15)
+        venueEvent.Size = New Size(40, 16)
         venueEvent.TabIndex = 95
         venueEvent.Text = "venue"
         ' 
@@ -439,10 +435,11 @@ Partial Class Form7
         nameEvent.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         nameEvent.AutoSize = True
         nameEvent.BackColor = Color.Transparent
-        nameEvent.Font = New Font("Helvetica", 15F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        nameEvent.Font = New Font("Arial", 15F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        nameEvent.ForeColor = Color.White
         nameEvent.Location = New Point(5, 30)
         nameEvent.Name = "nameEvent"
-        nameEvent.Size = New Size(118, 24)
+        nameEvent.Size = New Size(115, 24)
         nameEvent.TabIndex = 94
         nameEvent.Text = "nameEvent"
         ' 
@@ -450,19 +447,19 @@ Partial Class Form7
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
+        BackgroundImage = My.Resources.Resources._0011
+        BackgroundImageLayout = ImageLayout.Stretch
         ClientSize = New Size(861, 611)
         Controls.Add(selectedEvent)
         Controls.Add(refreshSelect)
         Controls.Add(DataGridView1)
         Controls.Add(Label2)
         Controls.Add(logOut)
-        Controls.Add(Label1)
         Controls.Add(viewOrders)
         Controls.Add(viewUser)
         Controls.Add(viewEvents)
-        Controls.Add(homepage)
         Name = "Form7"
-        Text = "Form7"
+        Text = "TICKETING SYSTEM - Order Tickets"
         CType(DataGridView1, ComponentModel.ISupportInitialize).EndInit()
         selectedEvent.ResumeLayout(False)
         selectedEvent.PerformLayout()
@@ -472,11 +469,9 @@ Partial Class Form7
     End Sub
 
     Friend WithEvents logOut As LinkLabel
-    Friend WithEvents Label1 As Label
     Friend WithEvents viewOrders As LinkLabel
     Friend WithEvents viewUser As LinkLabel
     Friend WithEvents viewEvents As LinkLabel
-    Friend WithEvents homepage As LinkLabel
     Friend WithEvents Label2 As Label
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents eventDetails As RichTextBox

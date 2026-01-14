@@ -41,6 +41,7 @@ Public Class Form5
     Private Sub Form5_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         loadTable()
         DataGridView1.ReadOnly = True
+
     End Sub
 
     Public Sub loadTable()
@@ -66,10 +67,6 @@ Public Class Form5
         End Try
 
     End Sub
-
-
-
-
 
 
 End Class

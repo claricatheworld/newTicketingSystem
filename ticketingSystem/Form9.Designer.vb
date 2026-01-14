@@ -27,11 +27,9 @@ Partial Class Form9
         DataGridView1 = New DataGridView()
         Label3 = New Label()
         LinkLabel5 = New LinkLabel()
-        Label1 = New Label()
         viewOrders = New LinkLabel()
         viewUser = New LinkLabel()
         viewEvents = New LinkLabel()
-        homepage = New LinkLabel()
         CType(DataGridView1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
@@ -39,10 +37,12 @@ Partial Class Form9
         ' 
         addOrder.AutoSize = True
         addOrder.BackColor = Color.Transparent
-        addOrder.Font = New Font("Helvetica", 9.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        addOrder.Font = New Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        addOrder.ForeColor = Color.White
+        addOrder.LinkColor = Color.White
         addOrder.Location = New Point(707, 90)
         addOrder.Name = "addOrder"
-        addOrder.Size = New Size(66, 15)
+        addOrder.Size = New Size(66, 16)
         addOrder.TabIndex = 38
         addOrder.TabStop = True
         addOrder.Text = "Add Order"
@@ -50,10 +50,13 @@ Partial Class Form9
         ' editOrder
         ' 
         editOrder.AutoSize = True
-        editOrder.Font = New Font("Helvetica", 9.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        editOrder.BackColor = Color.Transparent
+        editOrder.Font = New Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        editOrder.ForeColor = Color.White
+        editOrder.LinkColor = Color.White
         editOrder.Location = New Point(781, 90)
         editOrder.Name = "editOrder"
-        editOrder.Size = New Size(66, 15)
+        editOrder.Size = New Size(66, 16)
         editOrder.TabIndex = 37
         editOrder.TabStop = True
         editOrder.Text = "Edit Order"
@@ -75,10 +78,12 @@ Partial Class Form9
         ' 
         Label3.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         Label3.AutoSize = True
-        Label3.Font = New Font("Helvetica", 15F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label3.BackColor = Color.Transparent
+        Label3.Font = New Font("Arial", 15F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label3.ForeColor = Color.White
         Label3.Location = New Point(12, 81)
         Label3.Name = "Label3"
-        Label3.Size = New Size(135, 24)
+        Label3.Size = New Size(130, 24)
         Label3.TabIndex = 35
         Label3.Text = "ORDER LIST"
         ' 
@@ -87,7 +92,8 @@ Partial Class Form9
         LinkLabel5.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         LinkLabel5.AutoSize = True
         LinkLabel5.BackColor = Color.Transparent
-        LinkLabel5.Font = New Font("Helvetica", 10F)
+        LinkLabel5.Font = New Font("Arial", 10F)
+        LinkLabel5.LinkColor = Color.White
         LinkLabel5.Location = New Point(791, 8)
         LinkLabel5.Name = "LinkLabel5"
         LinkLabel5.Size = New Size(58, 16)
@@ -95,26 +101,16 @@ Partial Class Form9
         LinkLabel5.TabStop = True
         LinkLabel5.Text = "Log Out"
         ' 
-        ' Label1
-        ' 
-        Label1.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
-        Label1.AutoSize = True
-        Label1.Font = New Font("Helvetica", 15F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label1.Location = New Point(777, 24)
-        Label1.Name = "Label1"
-        Label1.Size = New Size(72, 24)
-        Label1.TabIndex = 33
-        Label1.Text = "Hello! "
-        ' 
         ' viewOrders
         ' 
         viewOrders.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         viewOrders.AutoSize = True
         viewOrders.BackColor = Color.Transparent
-        viewOrders.Font = New Font("Helvetica", 9.75F)
-        viewOrders.Location = New Point(113, 9)
+        viewOrders.Font = New Font("Arial", 9.75F)
+        viewOrders.LinkColor = Color.White
+        viewOrders.Location = New Point(66, 9)
         viewOrders.Name = "viewOrders"
-        viewOrders.Size = New Size(46, 15)
+        viewOrders.Size = New Size(46, 16)
         viewOrders.TabIndex = 32
         viewOrders.TabStop = True
         viewOrders.Text = "Orders"
@@ -124,10 +120,11 @@ Partial Class Form9
         viewUser.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         viewUser.AutoSize = True
         viewUser.BackColor = Color.Transparent
-        viewUser.Font = New Font("Helvetica", 9.75F)
-        viewUser.Location = New Point(165, 9)
+        viewUser.Font = New Font("Arial", 9.75F)
+        viewUser.LinkColor = Color.White
+        viewUser.Location = New Point(118, 9)
         viewUser.Name = "viewUser"
-        viewUser.Size = New Size(41, 15)
+        viewUser.Size = New Size(41, 16)
         viewUser.TabIndex = 31
         viewUser.TabStop = True
         viewUser.Text = "Users"
@@ -137,44 +134,32 @@ Partial Class Form9
         viewEvents.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         viewEvents.AutoSize = True
         viewEvents.BackColor = Color.Transparent
-        viewEvents.Font = New Font("Helvetica", 9.75F)
-        viewEvents.Location = New Point(59, 9)
+        viewEvents.Font = New Font("Arial", 9.75F)
+        viewEvents.LinkColor = Color.White
+        viewEvents.Location = New Point(12, 9)
         viewEvents.Name = "viewEvents"
-        viewEvents.Size = New Size(48, 15)
+        viewEvents.Size = New Size(46, 16)
         viewEvents.TabIndex = 30
         viewEvents.TabStop = True
         viewEvents.Text = "Events"
-        ' 
-        ' homepage
-        ' 
-        homepage.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
-        homepage.AutoSize = True
-        homepage.BackColor = Color.Transparent
-        homepage.Font = New Font("Helvetica", 9.75F)
-        homepage.Location = New Point(12, 9)
-        homepage.Name = "homepage"
-        homepage.Size = New Size(41, 15)
-        homepage.TabIndex = 29
-        homepage.TabStop = True
-        homepage.Text = "Home"
         ' 
         ' Form9
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
+        BackgroundImage = My.Resources.Resources._0011
+        BackgroundImageLayout = ImageLayout.Stretch
         ClientSize = New Size(861, 611)
         Controls.Add(addOrder)
         Controls.Add(editOrder)
         Controls.Add(DataGridView1)
         Controls.Add(Label3)
         Controls.Add(LinkLabel5)
-        Controls.Add(Label1)
         Controls.Add(viewOrders)
         Controls.Add(viewUser)
         Controls.Add(viewEvents)
-        Controls.Add(homepage)
         Name = "Form9"
-        Text = "Form9"
+        Text = "TICKETING SYSTEM - List Of Orders"
         CType(DataGridView1, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()
@@ -185,9 +170,7 @@ Partial Class Form9
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents Label3 As Label
     Friend WithEvents LinkLabel5 As LinkLabel
-    Friend WithEvents Label1 As Label
     Friend WithEvents viewOrders As LinkLabel
     Friend WithEvents viewUser As LinkLabel
     Friend WithEvents viewEvents As LinkLabel
-    Friend WithEvents homepage As LinkLabel
 End Class
