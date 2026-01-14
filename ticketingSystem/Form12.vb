@@ -78,5 +78,6 @@ Public Class Form12
     Private Sub Form12_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         username.Clear()
         password.Clear()
+
     End Sub
 End Class
