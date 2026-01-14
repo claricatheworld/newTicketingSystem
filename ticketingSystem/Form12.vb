@@ -2,6 +2,7 @@
 
 Public Class Form12
     Dim userType As String
+    Dim status As String
     Private Sub login_Click(sender As Object, e As EventArgs) Handles login.Click
 
         Dim usernameInput As String = username.Text
@@ -23,32 +24,42 @@ Public Class Form12
 
             If table.Rows.Count > 0 Then
                 Dim accountType As String = table.Rows(0)("type").ToString()
+                Dim status As String = table.Rows(0)("status").ToString()
 
                 If accountType = "Admin" Then
-
                     userType = "Admin"
-                    MessageBox.Show("Welcome Admin " & usernameInput & " !")
-                    con.Close()
 
+                    If status = "Active" Then
+                        MessageBox.Show("Welcome Admin " & usernameInput & " !")
+                        con.Close()
 
-                    Form5.Show()
-                    Me.Hide()
+                        Form5.Show()
+                        Me.Hide()
+                    Else
+                        MessageBox.Show("Your account is inactive. Please contact the administrator.")
+                    End If
+
 
 
                 ElseIf accountType = "Cashier" Then
-
-
                     userType = "Cashier"
-                    MessageBox.Show("Welcome User " & usernameInput & " !")
-                    con.Close()
 
-                    Form7.Show()
-                    Me.Hide()
+                    If status = "Active" Then
+                        MessageBox.Show("Welcome User " & usernameInput & " !")
+                        con.Close()
+
+                        Form7.Show()
+                        Me.Hide()
+                    Else
+                        MessageBox.Show("Your account is inactive. Please contact the administrator.")
+                    End If
+
+
                 End If
 
 
             Else
-                MessageBox.Show("Username/ Password is incorrect.")
+                MessageBox.Show("Username/ Password is incorrect. ")
 
             End If
 
