@@ -114,7 +114,7 @@ VALUES (
 
         End Try
 
-        Form5.loadTable()
+
         Form5.Show()
         Me.Hide()
     End Sub
@@ -135,5 +135,8 @@ VALUES (
         errorNotice.Refresh()
     End Sub
 
-
+    Private Sub logOut_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles logOut.LinkClicked
+        Form12.Show()
+        Me.Close()
+    End Sub
 End Class

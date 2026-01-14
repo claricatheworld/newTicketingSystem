@@ -235,7 +235,8 @@ VALUES (
 
     End Sub
 
-
-
-
+    Private Sub logOut_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles logOut.LinkClicked
+        Form12.Show()
+        Me.Close()
+    End Sub
 End Class

@@ -237,7 +237,7 @@ WHERE eventID = '" & eventID.Text & "' "
                     Dim oldTotal As Integer = orderID.Tag
                     Dim newTotal As Integer = eventPrice.Text * newQuantity
 
-                    cmd.CommandText = "UPDATE ticketorder SET quantity = " & newQuantity & ", total =  " & newTotal & " ,
+                    cmd.CommandText = "UPDATE ticketorder SET quantity = " & oldQuantity & ", total =  " & newTotal & " ,
 customername = '" & customername.Text & "', customercontactnumber = '" & customercontactnumber.Text & "',  customeremail = '" & customeremail.Text & "'
 WHERE orderID = '" & orderID.Text & "' "
                     cmd.ExecuteNonQuery()
@@ -356,7 +356,9 @@ WHERE orderID = '" & orderID.Text & "' "
                     'no changes in qty just update customer details
 
                 Else
-                    cmd.CommandText = "UPDATE ticketorder SET quantity = " & newQuantity & ", 
+
+
+                    cmd.CommandText = "UPDATE ticketorder SET quantity = " & orderQuantity.Value & ", total =  " & orderID.Tag & " ,
 customername = '" & customername.Text & "', customercontactnumber = '" & customercontactnumber.Text & "',  customeremail = '" & customeremail.Text & "'
 WHERE orderID = '" & orderID.Text & "' "
                     cmd.ExecuteNonQuery()
@@ -366,8 +368,34 @@ WHERE orderID = '" & orderID.Text & "' "
 
                     cmd.ExecuteNonQuery()
 
+                    con.Close()
+
+                    Dim printReceipt As New Form11()
+
+                    'prop short for property
+                    printReceipt.propNameEvent = eventName.Text
+                    printReceipt.propOrderID = CInt(orderID.Text)
+                    printReceipt.propCustomerName = customername.Text
+                    printReceipt.propQty = orderQuantity.Value
+                    printReceipt.propTotalAmount = orderID.Tag
+
+                    printReceipt.Show()
+
+                    MessageBox.Show("Order successfully updated!")
+
+
+                    eventID.Clear()
+                    eventName.Clear()
+                    Dim eventAvailability As Integer = 0
+                    orderQuantity.Value = 1
+
+                    customername.Clear()
+                    customercontactnumber.Clear()
+                    customeremail.Clear()
                     ticketVerifier.Text = ""
                     errorNotice.Text = ""
+
+                    Me.Hide()
 
                 End If
 
@@ -393,4 +421,8 @@ WHERE orderID = '" & orderID.Text & "' "
 
     End Sub
 
+    Private Sub LinkLabel5_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLabel5.LinkClicked
+        Form12.Show()
+        Me.Close()
+    End Sub
 End Class

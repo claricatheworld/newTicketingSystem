@@ -85,7 +85,7 @@ Partial Class Form3
         viewOrder.BackColor = Color.Transparent
         viewOrder.Font = New Font("Arial", 9.75F)
         viewOrder.LinkColor = Color.White
-        viewOrder.Location = New Point(113, 9)
+        viewOrder.Location = New Point(66, 9)
         viewOrder.Name = "viewOrder"
         viewOrder.Size = New Size(46, 16)
         viewOrder.TabIndex = 18
@@ -99,7 +99,7 @@ Partial Class Form3
         viewUser.BackColor = Color.Transparent
         viewUser.Font = New Font("Arial", 9.75F)
         viewUser.LinkColor = Color.White
-        viewUser.Location = New Point(165, 9)
+        viewUser.Location = New Point(118, 9)
         viewUser.Name = "viewUser"
         viewUser.Size = New Size(41, 16)
         viewUser.TabIndex = 17
@@ -113,7 +113,7 @@ Partial Class Form3
         viewEvent.BackColor = Color.Transparent
         viewEvent.Font = New Font("Arial", 9.75F)
         viewEvent.LinkColor = Color.White
-        viewEvent.Location = New Point(59, 9)
+        viewEvent.Location = New Point(12, 9)
         viewEvent.Name = "viewEvent"
         viewEvent.Size = New Size(46, 16)
         viewEvent.TabIndex = 16

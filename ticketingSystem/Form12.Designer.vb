@@ -29,6 +29,7 @@ Partial Class Form12
         Label1 = New Label()
         login = New Button()
         Label2 = New Label()
+        CheckBox1 = New CheckBox()
         SuspendLayout()
         ' 
         ' Label3
@@ -50,6 +51,7 @@ Partial Class Form12
         password.Font = New Font("Arial", 9F)
         password.Location = New Point(303, 316)
         password.Name = "password"
+        password.PasswordChar = "*"c
         password.PlaceholderText = "Enter password"
         password.Size = New Size(256, 21)
         password.TabIndex = 31
@@ -113,6 +115,16 @@ Partial Class Form12
         Label2.TabIndex = 36
         Label2.Text = "James Patrick Austria | Anabel Buta | Clarica Clamor | Benson Delos Reyes | John Landscape Ubando"
         ' 
+        ' CheckBox1
+        ' 
+        CheckBox1.AutoSize = True
+        CheckBox1.BackColor = Color.Transparent
+        CheckBox1.Location = New Point(565, 320)
+        CheckBox1.Name = "CheckBox1"
+        CheckBox1.Size = New Size(15, 14)
+        CheckBox1.TabIndex = 37
+        CheckBox1.UseVisualStyleBackColor = False
+        ' 
         ' Form12
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
@@ -120,6 +132,7 @@ Partial Class Form12
         BackgroundImage = My.Resources.Resources._0011
         BackgroundImageLayout = ImageLayout.Stretch
         ClientSize = New Size(861, 611)
+        Controls.Add(CheckBox1)
         Controls.Add(Label2)
         Controls.Add(login)
         Controls.Add(Label1)
@@ -128,7 +141,7 @@ Partial Class Form12
         Controls.Add(username)
         Controls.Add(Label3)
         Name = "Form12"
-        Text = "Form12"
+        Text = "TICKETING SYSTEM - Welcome!"
         ResumeLayout(False)
         PerformLayout()
     End Sub
@@ -140,4 +153,5 @@ Partial Class Form12
     Friend WithEvents Label1 As Label
     Friend WithEvents login As Button
     Friend WithEvents Label2 As Label
+    Friend WithEvents CheckBox1 As CheckBox
 End Class

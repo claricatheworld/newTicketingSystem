@@ -68,5 +68,8 @@ Public Class Form5
 
     End Sub
 
-
+    Private Sub LinkLabel5_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLabel5.LinkClicked
+        Form12.Show()
+        Me.Close()
+    End Sub
 End Class

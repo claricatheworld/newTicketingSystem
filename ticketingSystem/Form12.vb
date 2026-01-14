@@ -27,7 +27,7 @@ Public Class Form12
                 If accountType = "Admin" Then
 
                     userType = "Admin"
-                    MessageBox.Show("Welcome Admin" & usernameInput & " !")
+                    MessageBox.Show("Welcome Admin " & usernameInput & " !")
                     con.Close()
 
 
@@ -39,7 +39,7 @@ Public Class Form12
 
 
                     userType = "Cashier"
-                    MessageBox.Show("Welcome User" & usernameInput & " !")
+                    MessageBox.Show("Welcome User " & usernameInput & " !")
                     con.Close()
 
                     Form7.Show()
@@ -56,12 +56,27 @@ Public Class Form12
 
             con.Close()
 
+
+            username.Clear()
+            password.Clear()
+
+
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         End Try
 
     End Sub
 
+    Private Sub CheckBox1_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox1.CheckedChanged
+        If CheckBox1.Checked = True Then
+            password.PasswordChar = ""
+        Else
+            password.PasswordChar = "*"
+        End If
+    End Sub
 
-
+    Private Sub Form12_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        username.Clear()
+        password.Clear()
+    End Sub
 End Class

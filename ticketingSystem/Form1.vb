@@ -211,4 +211,9 @@ VALUES (
     Private Sub errorNotice_Click(sender As Object, e As EventArgs) Handles errorNotice.Click
 
     End Sub
+
+    Private Sub logOut_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles logOut.LinkClicked
+        Form12.Show()
+        Me.Close()
+    End Sub
 End Class

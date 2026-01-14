@@ -60,10 +60,10 @@ Partial Class Form11
         ' 
         nameofthevent.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         nameofthevent.AutoSize = True
-        nameofthevent.Font = New Font("Arial", 15F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        nameofthevent.Location = New Point(17, 14)
+        nameofthevent.Font = New Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        nameofthevent.Location = New Point(17, 9)
         nameofthevent.Name = "nameofthevent"
-        nameofthevent.Size = New Size(119, 24)
+        nameofthevent.Size = New Size(97, 19)
         nameofthevent.TabIndex = 70
         nameofthevent.Text = "event name"
         nameofthevent.TextAlign = ContentAlignment.MiddleLeft
@@ -268,7 +268,7 @@ Partial Class Form11
         Controls.Add(Label1)
         Controls.Add(seperator)
         Name = "Form11"
-        Text = "Form11"
+        Text = "CUSTOMER RECEIPT"
         CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
         CType(DataGridView1, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
