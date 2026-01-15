@@ -37,6 +37,7 @@
         eventActive.Checked = False
         eventInactive.Checked = False
 
+        errorNotice.Refresh()
 
 
     End Sub
@@ -46,8 +47,6 @@
 
 
             'Status
-
-
             If eventActive.Checked Then
                 status = "Active"
 
@@ -89,6 +88,7 @@ VALUES (
                 cmd.ExecuteNonQuery()
                 errorNotice.Text = " "
                 MessageBox.Show("Event succesfully added!")
+
                 con.Close()
 
 
@@ -104,6 +104,7 @@ VALUES (
                 eventActive.Checked = False
                 eventInactive.Checked = False
 
+                errorNotice.Refresh()
 
             End If
 
@@ -112,6 +113,7 @@ VALUES (
             MessageBox.Show(ex.ToString)
 
         End Try
+
 
         Form5.Show()
         Me.Hide()
@@ -129,7 +131,12 @@ VALUES (
         eventDetails.Clear()
         eventActive.Checked = False
         eventInactive.Checked = False
+
+        errorNotice.Refresh()
     End Sub
 
-
+    Private Sub logOut_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles logOut.LinkClicked
+        Form12.Show()
+        Me.Close()
+    End Sub
 End Class

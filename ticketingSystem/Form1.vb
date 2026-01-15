@@ -5,6 +5,7 @@
     Dim type As String
     Dim status As String
 
+    Public propAccountType As String
 
     Private Sub viewEvents_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles viewEvents.LinkClicked
         Form5.Show()
@@ -25,6 +26,8 @@
     End Sub
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+
 
         firstname.Clear()
         middlename.Clear()
@@ -50,6 +53,8 @@
 
         userActive.Checked = False
         userInactive.Checked = False
+
+        errorNotice.Refresh()
 
     End Sub
 
@@ -162,6 +167,7 @@ VALUES (
                 userActive.Checked = False
                 userInactive.Checked = False
 
+                errorNotice.Refresh()
 
             End If
         Catch ex As Exception
@@ -198,9 +204,16 @@ VALUES (
 
         userActive.Checked = False
         userInactive.Checked = False
+
+        errorNotice.Refresh()
     End Sub
 
+    Private Sub errorNotice_Click(sender As Object, e As EventArgs) Handles errorNotice.Click
 
+    End Sub
 
-
+    Private Sub logOut_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles logOut.LinkClicked
+        Form12.Show()
+        Me.Close()
+    End Sub
 End Class

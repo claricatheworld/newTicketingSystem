@@ -41,6 +41,7 @@ Public Class Form5
     Private Sub Form5_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         loadTable()
         DataGridView1.ReadOnly = True
+
     End Sub
 
     Public Sub loadTable()
@@ -67,9 +68,8 @@ Public Class Form5
 
     End Sub
 
-
-
-
-
-
+    Private Sub LinkLabel5_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLabel5.LinkClicked
+        Form12.Show()
+        Me.Close()
+    End Sub
 End Class

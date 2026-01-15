@@ -22,11 +22,9 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        homepage = New LinkLabel()
         viewEvents = New LinkLabel()
         viewUser = New LinkLabel()
         viewOrders = New LinkLabel()
-        Label1 = New Label()
         logOut = New LinkLabel()
         Label3 = New Label()
         Label4 = New Label()
@@ -62,28 +60,17 @@ Partial Class Form1
         GroupBox3.SuspendLayout()
         SuspendLayout()
         ' 
-        ' homepage
-        ' 
-        homepage.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
-        homepage.AutoSize = True
-        homepage.BackColor = Color.Transparent
-        homepage.Font = New Font("Helvetica", 9.75F)
-        homepage.Location = New Point(12, 9)
-        homepage.Name = "homepage"
-        homepage.Size = New Size(41, 15)
-        homepage.TabIndex = 0
-        homepage.TabStop = True
-        homepage.Text = "Home"
-        ' 
         ' viewEvents
         ' 
         viewEvents.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         viewEvents.AutoSize = True
         viewEvents.BackColor = Color.Transparent
-        viewEvents.Font = New Font("Helvetica", 9.75F)
-        viewEvents.Location = New Point(59, 9)
+        viewEvents.Font = New Font("Arial", 9.75F)
+        viewEvents.LinkColor = Color.White
+        viewEvents.Location = New Point(12, 9)
+        viewEvents.Margin = New Padding(4, 0, 4, 0)
         viewEvents.Name = "viewEvents"
-        viewEvents.Size = New Size(48, 15)
+        viewEvents.Size = New Size(46, 16)
         viewEvents.TabIndex = 1
         viewEvents.TabStop = True
         viewEvents.Text = "Events"
@@ -93,10 +80,12 @@ Partial Class Form1
         viewUser.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         viewUser.AutoSize = True
         viewUser.BackColor = Color.Transparent
-        viewUser.Font = New Font("Helvetica", 9.75F)
-        viewUser.Location = New Point(165, 9)
+        viewUser.Font = New Font("Arial", 9.75F)
+        viewUser.LinkColor = Color.White
+        viewUser.Location = New Point(117, 9)
+        viewUser.Margin = New Padding(4, 0, 4, 0)
         viewUser.Name = "viewUser"
-        viewUser.Size = New Size(41, 15)
+        viewUser.Size = New Size(41, 16)
         viewUser.TabIndex = 2
         viewUser.TabStop = True
         viewUser.Text = "Users"
@@ -106,32 +95,25 @@ Partial Class Form1
         viewOrders.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         viewOrders.AutoSize = True
         viewOrders.BackColor = Color.Transparent
-        viewOrders.Font = New Font("Helvetica", 9.75F)
-        viewOrders.Location = New Point(113, 9)
+        viewOrders.Font = New Font("Arial", 9.75F)
+        viewOrders.LinkColor = Color.White
+        viewOrders.Location = New Point(66, 9)
+        viewOrders.Margin = New Padding(4, 0, 4, 0)
         viewOrders.Name = "viewOrders"
-        viewOrders.Size = New Size(46, 15)
+        viewOrders.Size = New Size(46, 16)
         viewOrders.TabIndex = 3
         viewOrders.TabStop = True
         viewOrders.Text = "Orders"
-        ' 
-        ' Label1
-        ' 
-        Label1.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
-        Label1.AutoSize = True
-        Label1.Font = New Font("Helvetica", 15F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label1.Location = New Point(777, 24)
-        Label1.Name = "Label1"
-        Label1.Size = New Size(72, 24)
-        Label1.TabIndex = 5
-        Label1.Text = "Hello! "
         ' 
         ' logOut
         ' 
         logOut.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         logOut.AutoSize = True
         logOut.BackColor = Color.Transparent
-        logOut.Font = New Font("Helvetica", 10F)
+        logOut.Font = New Font("Arial", 10F)
+        logOut.LinkColor = Color.White
         logOut.Location = New Point(791, 8)
+        logOut.Margin = New Padding(4, 0, 4, 0)
         logOut.Name = "logOut"
         logOut.Size = New Size(58, 16)
         logOut.TabIndex = 6
@@ -142,10 +124,13 @@ Partial Class Form1
         ' 
         Label3.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         Label3.AutoSize = True
-        Label3.Font = New Font("Helvetica", 15F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label3.BackColor = Color.Transparent
+        Label3.Font = New Font("Arial", 15F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label3.ForeColor = Color.White
         Label3.Location = New Point(12, 81)
+        Label3.Margin = New Padding(4, 0, 4, 0)
         Label3.Name = "Label3"
-        Label3.Size = New Size(274, 24)
+        Label3.Size = New Size(262, 24)
         Label3.TabIndex = 8
         Label3.Text = "PERSONAL INFORMATION"
         ' 
@@ -153,51 +138,60 @@ Partial Class Form1
         ' 
         Label4.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         Label4.AutoSize = True
-        Label4.Font = New Font("Helvetica", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label4.BackColor = Color.Transparent
+        Label4.Font = New Font("Arial", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label4.ForeColor = Color.White
         Label4.Location = New Point(12, 120)
+        Label4.Margin = New Padding(4, 0, 4, 0)
         Label4.Name = "Label4"
-        Label4.Size = New Size(47, 15)
+        Label4.Size = New Size(48, 16)
         Label4.TabIndex = 9
         Label4.Text = "Name:"
         ' 
         ' firstname
         ' 
         firstname.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
-        firstname.Font = New Font("Helvetica", 9F)
+        firstname.Font = New Font("Arial", 9F)
         firstname.Location = New Point(12, 138)
+        firstname.Margin = New Padding(4, 3, 4, 3)
         firstname.Name = "firstname"
         firstname.PlaceholderText = "Enter first name"
-        firstname.Size = New Size(274, 22)
+        firstname.Size = New Size(274, 21)
         firstname.TabIndex = 10
         ' 
         ' middlename
         ' 
         middlename.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
-        middlename.Font = New Font("Helvetica", 9F)
+        middlename.Font = New Font("Arial", 9F)
         middlename.Location = New Point(293, 138)
+        middlename.Margin = New Padding(4, 3, 4, 3)
         middlename.Name = "middlename"
         middlename.PlaceholderText = "Enter middle name"
-        middlename.Size = New Size(274, 22)
+        middlename.Size = New Size(274, 21)
         middlename.TabIndex = 11
         ' 
         ' lastname
         ' 
         lastname.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
-        lastname.Font = New Font("Helvetica", 9F)
+        lastname.Font = New Font("Arial", 9F)
         lastname.Location = New Point(574, 138)
+        lastname.Margin = New Padding(4, 3, 4, 3)
         lastname.Name = "lastname"
         lastname.PlaceholderText = "Enter last name"
-        lastname.Size = New Size(274, 22)
+        lastname.Size = New Size(274, 21)
         lastname.TabIndex = 12
         ' 
         ' Label5
         ' 
         Label5.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         Label5.AutoSize = True
-        Label5.Font = New Font("Helvetica", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label5.BackColor = Color.Transparent
+        Label5.Font = New Font("Arial", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label5.ForeColor = Color.White
         Label5.Location = New Point(12, 178)
+        Label5.Margin = New Padding(4, 0, 4, 0)
         Label5.Name = "Label5"
-        Label5.Size = New Size(36, 15)
+        Label5.Size = New Size(36, 16)
         Label5.TabIndex = 14
         Label5.Text = "Age:"
         ' 
@@ -205,6 +199,7 @@ Partial Class Form1
         ' 
         age.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         age.Location = New Point(12, 196)
+        age.Margin = New Padding(4, 3, 4, 3)
         age.Mask = "00"
         age.Name = "age"
         age.Size = New Size(274, 23)
@@ -213,12 +208,16 @@ Partial Class Form1
         ' GroupBox1
         ' 
         GroupBox1.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
+        GroupBox1.BackColor = Color.Transparent
         GroupBox1.Controls.Add(female)
         GroupBox1.Controls.Add(nonbinary)
         GroupBox1.Controls.Add(male)
+        GroupBox1.ForeColor = Color.White
         GroupBox1.Location = New Point(293, 178)
+        GroupBox1.Margin = New Padding(4, 3, 4, 3)
         GroupBox1.Name = "GroupBox1"
-        GroupBox1.Size = New Size(556, 41)
+        GroupBox1.Padding = New Padding(4, 3, 4, 3)
+        GroupBox1.Size = New Size(556, 42)
         GroupBox1.TabIndex = 16
         GroupBox1.TabStop = False
         GroupBox1.Text = "Gender"
@@ -228,6 +227,7 @@ Partial Class Form1
         female.AutoSize = True
         female.BackColor = Color.Transparent
         female.Location = New Point(54, 18)
+        female.Margin = New Padding(4, 3, 4, 3)
         female.Name = "female"
         female.Size = New Size(63, 19)
         female.TabIndex = 17
@@ -240,6 +240,7 @@ Partial Class Form1
         nonbinary.AutoSize = True
         nonbinary.BackColor = Color.Transparent
         nonbinary.Location = New Point(380, 18)
+        nonbinary.Margin = New Padding(4, 3, 4, 3)
         nonbinary.Name = "nonbinary"
         nonbinary.Size = New Size(111, 19)
         nonbinary.TabIndex = 19
@@ -252,6 +253,7 @@ Partial Class Form1
         male.AutoSize = True
         male.BackColor = Color.Transparent
         male.Location = New Point(223, 18)
+        male.Margin = New Padding(4, 3, 4, 3)
         male.Name = "male"
         male.Size = New Size(51, 19)
         male.TabIndex = 18
@@ -263,6 +265,7 @@ Partial Class Form1
         ' 
         contactnumber.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         contactnumber.Location = New Point(12, 255)
+        contactnumber.Margin = New Padding(4, 3, 4, 3)
         contactnumber.Mask = "00000000000"
         contactnumber.Name = "contactnumber"
         contactnumber.Size = New Size(415, 23)
@@ -272,10 +275,13 @@ Partial Class Form1
         ' 
         Label6.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         Label6.AutoSize = True
-        Label6.Font = New Font("Helvetica", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label6.BackColor = Color.Transparent
+        Label6.Font = New Font("Arial", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label6.ForeColor = Color.White
         Label6.Location = New Point(12, 237)
+        Label6.Margin = New Padding(4, 0, 4, 0)
         Label6.Name = "Label6"
-        Label6.Size = New Size(112, 15)
+        Label6.Size = New Size(113, 16)
         Label6.TabIndex = 19
         Label6.Text = "Contact Number:"
         ' 
@@ -283,43 +289,54 @@ Partial Class Form1
         ' 
         Label2.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         Label2.AutoSize = True
-        Label2.Font = New Font("Helvetica", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label2.BackColor = Color.Transparent
+        Label2.Font = New Font("Arial", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label2.ForeColor = Color.White
         Label2.Location = New Point(433, 237)
+        Label2.Margin = New Padding(4, 0, 4, 0)
         Label2.Name = "Label2"
-        Label2.Size = New Size(97, 15)
+        Label2.Size = New Size(100, 16)
         Label2.TabIndex = 20
         Label2.Text = "Email address:"
         ' 
         ' email
         ' 
         email.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
-        email.Font = New Font("Helvetica", 9F)
+        email.Font = New Font("Arial", 9F)
         email.Location = New Point(433, 255)
+        email.Margin = New Padding(4, 3, 4, 3)
         email.Name = "email"
         email.PlaceholderText = "Enter email address"
-        email.Size = New Size(415, 22)
+        email.Size = New Size(415, 21)
         email.TabIndex = 21
         ' 
         ' Label8
         ' 
         Label8.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         Label8.AutoSize = True
-        Label8.Font = New Font("Helvetica", 15F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label8.BackColor = Color.Transparent
+        Label8.Font = New Font("Arial", 15F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label8.ForeColor = Color.White
         Label8.Location = New Point(12, 329)
+        Label8.Margin = New Padding(4, 0, 4, 0)
         Label8.Name = "Label8"
-        Label8.Size = New Size(222, 24)
+        Label8.Size = New Size(216, 24)
         Label8.TabIndex = 23
         Label8.Text = "REGISTRATION TYPE"
         ' 
         ' GroupBox2
         ' 
         GroupBox2.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
+        GroupBox2.BackColor = Color.Transparent
         GroupBox2.Controls.Add(cashierAccount)
         GroupBox2.Controls.Add(adminAccount)
-        GroupBox2.Font = New Font("Helvetica", 9F)
+        GroupBox2.Font = New Font("Arial", 9F)
+        GroupBox2.ForeColor = Color.White
         GroupBox2.Location = New Point(12, 380)
+        GroupBox2.Margin = New Padding(4, 3, 4, 3)
         GroupBox2.Name = "GroupBox2"
-        GroupBox2.Size = New Size(415, 56)
+        GroupBox2.Padding = New Padding(4, 3, 4, 3)
+        GroupBox2.Size = New Size(415, 57)
         GroupBox2.TabIndex = 24
         GroupBox2.TabStop = False
         GroupBox2.Text = "Account Type"
@@ -329,8 +346,9 @@ Partial Class Form1
         cashierAccount.AutoSize = True
         cashierAccount.BackColor = Color.Transparent
         cashierAccount.Location = New Point(191, 17)
+        cashierAccount.Margin = New Padding(4, 3, 4, 3)
         cashierAccount.Name = "cashierAccount"
-        cashierAccount.Size = New Size(68, 18)
+        cashierAccount.Size = New Size(69, 19)
         cashierAccount.TabIndex = 27
         cashierAccount.TabStop = True
         cashierAccount.Text = "Cashier"
@@ -341,8 +359,9 @@ Partial Class Form1
         adminAccount.AutoSize = True
         adminAccount.BackColor = Color.Transparent
         adminAccount.Location = New Point(83, 17)
+        adminAccount.Margin = New Padding(4, 3, 4, 3)
         adminAccount.Name = "adminAccount"
-        adminAccount.Size = New Size(60, 18)
+        adminAccount.Size = New Size(60, 19)
         adminAccount.TabIndex = 26
         adminAccount.TabStop = True
         adminAccount.Text = "Admin"
@@ -351,12 +370,16 @@ Partial Class Form1
         ' GroupBox3
         ' 
         GroupBox3.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
+        GroupBox3.BackColor = Color.Transparent
         GroupBox3.Controls.Add(userInactive)
         GroupBox3.Controls.Add(userActive)
-        GroupBox3.Font = New Font("Helvetica", 9F)
+        GroupBox3.Font = New Font("Arial", 9F)
+        GroupBox3.ForeColor = Color.White
         GroupBox3.Location = New Point(433, 380)
+        GroupBox3.Margin = New Padding(4, 3, 4, 3)
         GroupBox3.Name = "GroupBox3"
-        GroupBox3.Size = New Size(415, 56)
+        GroupBox3.Padding = New Padding(4, 3, 4, 3)
+        GroupBox3.Size = New Size(415, 57)
         GroupBox3.TabIndex = 25
         GroupBox3.TabStop = False
         GroupBox3.Text = "Status"
@@ -366,8 +389,9 @@ Partial Class Form1
         userInactive.AutoSize = True
         userInactive.BackColor = Color.Transparent
         userInactive.Location = New Point(160, 17)
+        userInactive.Margin = New Padding(4, 3, 4, 3)
         userInactive.Name = "userInactive"
-        userInactive.Size = New Size(67, 18)
+        userInactive.Size = New Size(66, 19)
         userInactive.TabIndex = 29
         userInactive.TabStop = True
         userInactive.Text = "Inactive"
@@ -378,8 +402,9 @@ Partial Class Form1
         userActive.AutoSize = True
         userActive.BackColor = Color.Transparent
         userActive.Location = New Point(66, 17)
+        userActive.Margin = New Padding(4, 3, 4, 3)
         userActive.Name = "userActive"
-        userActive.Size = New Size(58, 18)
+        userActive.Size = New Size(56, 19)
         userActive.TabIndex = 28
         userActive.TabStop = True
         userActive.Text = "Active"
@@ -388,50 +413,59 @@ Partial Class Form1
         ' username
         ' 
         username.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
-        username.Font = New Font("Helvetica", 9F)
-        username.Location = New Point(12, 457)
+        username.Font = New Font("Arial", 9F)
+        username.Location = New Point(12, 477)
+        username.Margin = New Padding(4, 3, 4, 3)
         username.Name = "username"
         username.PlaceholderText = "Enter username"
-        username.Size = New Size(415, 22)
+        username.Size = New Size(415, 21)
         username.TabIndex = 27
         ' 
         ' Label7
         ' 
         Label7.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         Label7.AutoSize = True
-        Label7.Font = New Font("Helvetica", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label7.Location = New Point(12, 439)
+        Label7.BackColor = Color.Transparent
+        Label7.Font = New Font("Arial", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label7.ForeColor = Color.White
+        Label7.Location = New Point(12, 458)
+        Label7.Margin = New Padding(4, 0, 4, 0)
         Label7.Name = "Label7"
-        Label7.Size = New Size(73, 15)
+        Label7.Size = New Size(75, 16)
         Label7.TabIndex = 26
         Label7.Text = "Username:"
         ' 
         ' password
         ' 
         password.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
-        password.Font = New Font("Helvetica", 9F)
-        password.Location = New Point(433, 457)
+        password.Font = New Font("Arial", 9F)
+        password.Location = New Point(433, 477)
+        password.Margin = New Padding(4, 3, 4, 3)
         password.Name = "password"
         password.PlaceholderText = "Enter password"
-        password.Size = New Size(415, 22)
+        password.Size = New Size(415, 21)
         password.TabIndex = 29
         ' 
         ' Label9
         ' 
         Label9.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         Label9.AutoSize = True
-        Label9.Font = New Font("Helvetica", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label9.Location = New Point(433, 439)
+        Label9.BackColor = Color.Transparent
+        Label9.Font = New Font("Arial", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label9.ForeColor = Color.White
+        Label9.Location = New Point(433, 458)
+        Label9.Margin = New Padding(4, 0, 4, 0)
         Label9.Name = "Label9"
-        Label9.Size = New Size(71, 15)
+        Label9.Size = New Size(72, 16)
         Label9.TabIndex = 28
         Label9.Text = "Password:"
         ' 
         ' addUser
         ' 
         addUser.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
-        addUser.Font = New Font("Helvetica", 9.75F, FontStyle.Bold)
+        addUser.Font = New Font("Arial", 9.75F, FontStyle.Bold)
         addUser.Location = New Point(760, 567)
+        addUser.Margin = New Padding(4, 3, 4, 3)
         addUser.Name = "addUser"
         addUser.Size = New Size(89, 32)
         addUser.TabIndex = 30
@@ -441,8 +475,9 @@ Partial Class Form1
         ' clearForm
         ' 
         clearForm.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
-        clearForm.Font = New Font("Helvetica", 9.75F, FontStyle.Bold)
+        clearForm.Font = New Font("Arial", 9.75F, FontStyle.Bold)
         clearForm.Location = New Point(12, 567)
+        clearForm.Margin = New Padding(4, 3, 4, 3)
         clearForm.Name = "clearForm"
         clearForm.Size = New Size(89, 32)
         clearForm.TabIndex = 31
@@ -453,19 +488,22 @@ Partial Class Form1
         ' 
         errorNotice.AutoSize = True
         errorNotice.BackColor = Color.Transparent
-        errorNotice.Font = New Font("Helvetica", 9.75F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
+        errorNotice.Font = New Font("Arial Narrow", 9.75F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point, CByte(0))
         errorNotice.ForeColor = Color.Red
-        errorNotice.Location = New Point(12, 494)
+        errorNotice.Location = New Point(12, 509)
+        errorNotice.Margin = New Padding(4, 0, 4, 0)
         errorNotice.Name = "errorNotice"
-        errorNotice.Size = New Size(52, 15)
+        errorNotice.Size = New Size(15, 16)
         errorNotice.TabIndex = 32
-        errorNotice.Text = "Label10"
+        errorNotice.Text = "[]"
         ' 
         ' Form1
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(861, 611)
+        BackgroundImage = My.Resources.Resources._0011
+        BackgroundImageLayout = ImageLayout.Stretch
+        ClientSize = New Size(861, 612)
         Controls.Add(errorNotice)
         Controls.Add(clearForm)
         Controls.Add(addUser)
@@ -489,11 +527,10 @@ Partial Class Form1
         Controls.Add(Label4)
         Controls.Add(Label3)
         Controls.Add(logOut)
-        Controls.Add(Label1)
         Controls.Add(viewOrders)
         Controls.Add(viewUser)
         Controls.Add(viewEvents)
-        Controls.Add(homepage)
+        Margin = New Padding(4, 3, 4, 3)
         Name = "Form1"
         Text = "TICKETING SYSTEM - Register User"
         GroupBox1.ResumeLayout(False)
@@ -505,12 +542,9 @@ Partial Class Form1
         ResumeLayout(False)
         PerformLayout()
     End Sub
-
-    Friend WithEvents homepage As LinkLabel
     Friend WithEvents viewEvents As LinkLabel
     Friend WithEvents viewUser As LinkLabel
     Friend WithEvents viewOrders As LinkLabel
-    Friend WithEvents Label1 As Label
     Friend WithEvents logOut As LinkLabel
     Friend WithEvents Label3 As Label
     Friend WithEvents Label4 As Label

@@ -32,6 +32,7 @@ Public Class Form3
     Private Sub Form3_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         loadTable()
         DataGridView1.ReadOnly = True
+        errorNotice.Text = ""
     End Sub
 
     Sub loadTable()
@@ -149,8 +150,13 @@ Public Class Form3
             username.Clear()
             password.Clear()
 
+
+
             userActive.Checked = False
             userInactive.Checked = False
+
+
+            errorNotice.Refresh()
         Catch ex As Exception
             MessageBox.Show(ex.ToString)
         End Try
@@ -243,5 +249,8 @@ Public Class Form3
 
     End Sub
 
-
+    Private Sub LinkLabel5_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLabel5.LinkClicked
+        Form12.Show()
+        Me.Close()
+    End Sub
 End Class
